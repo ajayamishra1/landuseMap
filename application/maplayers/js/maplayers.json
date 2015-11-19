@@ -1,0 +1,20 @@
+{
+	"layers":[
+		{
+			"category_name": "Boundaries",
+			"category_id": "boundaries",
+			"sub_layers":[
+				{
+					"layer_name": "District Boundary",
+					"id": "district_boundary",
+					"url":"http://localhost:8080/geoserver/genesis/wms"
+				},
+				{
+					"layer_name": "Development Regions",
+					"id": "development_regions",
+					"url":"http://localhost:8080/geoserver/genesis/wms"
+				}
+			]
+		}
+	]
+}

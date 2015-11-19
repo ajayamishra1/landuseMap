@@ -1,0 +1,31 @@
+{
+	"layers":[
+		{
+			"category_name": "Boundaries",
+			"category_id": "boundaries",
+			"sub_layers":[
+				{
+					"layer_name": "District Boundary",
+					"id": "district_boundary"
+				},
+				{
+					"layer_name": "Development Regions",
+					"id": "development_regions"
+				}
+			]
+		},
+		{
+			"category_name": "Highways",
+			"sub_layers":[
+				{
+					"layer_name": "Arniko Highway-42",
+					"id": "arniko_highway_42"
+				},
+				{
+					"layer_name": "Road CL",
+					"id": "road_cl"
+				}
+			]
+		}
+	]
+}

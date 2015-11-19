@@ -1,0 +1,200 @@
+#layerTreeMainDiv
+{
+  display:none;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 1.42857;
+  color: #333;	
+  position: fixed;
+  z-index:150;
+  overflow-y: auto;
+  bottom:2px;
+  right:5px;
+  width:200px;
+  height:250px;
+  background: #f6f7f8; /* Old browsers */
+background: -moz-linear-gradient(top, #f6f7f8 0%, #e3e3e5 35%, #bfbfc5 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f7f8), color-stop(35%,#e3e3e5), color-stop(100%,#bfbfc5)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #f6f7f8 0%,#e3e3e5 35%,#bfbfc5 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #f6f7f8 0%,#e3e3e5 35%,#bfbfc5 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #f6f7f8 0%,#e3e3e5 35%,#bfbfc5 100%); /* IE10+ */
+background: linear-gradient(to bottom, #f6f7f8 0%,#e3e3e5 35%,#bfbfc5 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f7f8', endColorstr='#bfbfc5',GradientType=0 ); /* IE6-9 */
+}
+
+
+.layerTree-Title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #878787;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 1px solid #EBE6E2;
+    text-shadow: 0 2px 0 rgba(255,255,255,0.8);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.8);
+    text-align:center;
+}
+
+#layerTitle{
+	display:inline-block;
+}
+
+.layerNameHeading{
+	background-color:#ffffff;
+	width:100%;
+    cursor:pointer;
+    font-size: 13px;
+  	line-height: 0.5;
+  	color: #333;
+  	font-weight:bold;
+  	border-bottom: 1px solid #C9C9C9;
+} 
+
+.content {
+  padding: 5px 10px;
+  background-color:#ffffff;
+  display:none;
+  font-size: 12px;
+  line-height: 1.42857;
+  color: #333;
+  border-bottom: 1px solid #C9C9C9;
+}
+p { padding: 5px 0; }
+
+
+.layerNameinList_unchecked{
+	color: #ff0000;
+	font-weight:normal;
+}
+
+.layerNameinList_checked{
+	color: #5cb85c;
+	font-weight:bold;
+	font-size:13px;
+}
+
+.layerNameinList_unchecked1{
+	color: #ff0000;
+	font-weight:normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.close-open {
+    
+}
+ 
+/*replace the content value with the
+corresponding value from the list below*/
+ 
+.close-open:before {
+    content: "\f055";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+	display: inline-block;
+    color: #000000;
+    font-size: 18px;
+    padding:15px 10px;
+}
+
+
+.open-close {
+    
+}
+ 
+/*replace the content value with the
+corresponding value from the list below*/
+ 
+.open-close:before {
+    content: "\f056";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+	display: inline-block;
+    color: #000000;
+    font-size: 18px;
+    padding:15px 10px;
+}
+
+
+ 
+
+
+
+ h2, p, ol, ul, li {
+    margin:0px;
+    padding:0px;
+    font-size:10px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+ 
+/* --------- COLLAPSIBLE PANELS ----------*/
+ 
+.expandable-panel {
+    width:100%;
+    position:relative;
+    overflow:auto;
+    margin-bottom: 0px;
+    background-color:#ffffff;
+}
+.expandable-panel-heading {
+    width:100%;
+    cursor:pointer;
+    min-height:50px;
+    clear:both;
+    background-color:#ffffff;
+    position:relative;
+    border-bottom:1px solid;
+}
+.expandable-panel-heading:hover {
+    color:#666;
+}
+.expandable-panel-heading h2 {
+    padding:14px 10px 9px 15px;
+    font-size:12px;
+    font-weight:bold;
+    line-height:15px;
+}
+.expandable-panel-content {
+    padding:0 15px 0 15px;
+    margin-top:-999px;
+    background-color:#ffffff;
+}
+.expandable-panel-content p {
+    padding:4px 0 6px 0;
+}
+.expandable-panel-content p:first-child  {
+    padding-top:10px;
+}
+.expandable-panel-content p:last-child {
+    padding-bottom:15px;
+}
+.icon-close-open {
+    width:20px;
+    height:15px;
+    position:absolute;
+    background-image:url(icon-close-open.png);
+    right:15px;
+}
+.expandable-panel-content img {
+    float:right;
+    padding-left:12px;
+}
+.header-active {
+    background-color:#D0D7F3;
+}

@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index, all" />
+    <title>MAP</title>
+    <link rel="stylesheet" href="resources/external/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="resources/external/ol/css/ol.css" type="text/css" />
+    <link rel="stylesheet" href="resources/external/ol3pz/css/ol3pz.css" type="text/css" />
+    <link rel="stylesheet" href="application/main/css/main.css" type="text/css" />
+    <link href= "resources/external/fontawesome/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="application/layertree/layertree.css">
+  </head>
+  <body>
+
+	<div class="mapContainer">
+	    <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+		      <div class="container-fluid">
+		       <!-- Brand and toggle get grouped for better mobile display -->
+		       		<div class="navbar-header">
+		          		<a class="navbar-brand" href="#">:: Department of Urban Development & Building Construction ::   Integrated Revenue & Accounting Software </a>
+		        	</div>
+     		  </div><!-- /.container-fluid -->
+    	</nav>
+	     
+      	<div id="map"></div>
+	    
+	    <!-- ----------------- Layer Tree ---------------- -->
+		<div id="closedMenu">    	
+			<div id="closedMenuIcon"></div>
+			<div id="closedMenuText"> Open Menu </div>
+			
+		</div>
+	    <div id="openedMenu">
+	    	<div id="openedMenuIcon"></div>
+			<div id="openedMenuText"> Close Menu </div>
+	    </div>
+	    
+	    <div id="openedMenuWithLayerSettings">
+	    	<div id="openedMenuIcon"></div>
+			<div id="openedMenuText"> Close Menu </div>
+	    </div>
+	     
+	    <div id="layerTreeMainDiv">
+	    	<div class="layerTree-Title">
+	    		Maps & Layers    		
+	    	</div>
+	    </div> 
+	    
+	    <div id="layerManagerMain">
+	    	<div  class="layerTree-Title">
+	    		Layer Management
+	    	</div>
+	    </div>
+	      
+	</div>
+
+<script src="resources/external/jquery/jquery-2.1.4.min.js"></script>
+<script src="resources/external/bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+	
+	
+	
+	
+	//$("#layerTreeMainDiv").append("<div class='layerNameHeading'><span class='close-open'></span>Boundaries</div>");
+	
+	
+	
+	$.getJSON('result.json', function(data) {  
+        $.each(data.layers, function(entryIndex, entry) {
+        	$("#layerTreeMainDiv").append('<div class="layerNameHeading"><span class="close-open"></span>' + this.category_name + '</div>');        	
+        	$("#layerTreeMainDiv").append("<div class='content' id='" + this.category_id + "'></div>");
+        	var contentID = '#' + this.category_id;
+        	$.each(this.sub_layers, function() { 
+        		$(contentID ).append("<div class='checkbox checkbox-success'><input id='" + this.id + "' class='styled' type='checkbox'> <label for='" + this.id + "'>" + this.layer_name + "</label> </div>");	
+             	
+        	});
+        });
+ 	});
+	
+});
+</script>
+
+    <script src="resources/external/ol/js/ol-debug.js"></script>
+
+    <script src="resources/external/ol3pz/js/ol3pz.js"></script>
+    
+    <script type="text/javascript" src="application/maplayers/js/maplayers.js"></script>
+    
+    <script src="application/main/main.js"></script>
+    <script type="text/javascript" src="application/layertree/layertree.js"></script>
+  </body>
+</html>
